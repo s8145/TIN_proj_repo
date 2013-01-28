@@ -46,6 +46,27 @@ var server = http.createServer(function (req, res) {
 
 var socket = io.listen(server);
 
+/*
+0 - niewykonane
+1 - wykonane
+ */
+
+var task = [
+    {nazwa: "Wyslac FV", data: "2013-01-31", user: 'filip', status: 0},
+    {nazwa: "17ta, sms szef", data: "2013-01-31", user: 'filip', status: 0},
+    {nazwa: "Pion, odebrac dokumenty", data: "2013-01-31", user: 'monika', status: 0},
+    {nazwa: "Bualoy visa", data: "2013-01-23", user: 'monika', status: 1},
+    {nazwa: "Wyslac raport", data: "2013-01-31", user: 'monika', status: 0},
+    {nazwa: "Poczta", data: "2013-01-25", user: 'monika', status: 1}
+	{nazwa: "Nadac paczke", data: "2013-02-02", user: 'wszyscy', status: 0}
+	{nazwa: "Podlac kwiatki", data: "2013-01-31", user: 'wszyscy', status: 0}
+];
+
+var users = [
+    {nazwa: 'filip'},
+    {nazwa: 'monika'}
+];
+
 socket.on('connection', function (client) {
 
 });
