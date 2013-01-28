@@ -47,21 +47,7 @@ var server = http.createServer(function (req, res) {
 var socket = io.listen(server);
 
 socket.on('connection', function (client) {
-    'use strict';
-    var username;
 
-    client.send('Wtaj!');
-    client.send('Podaj nazwę użytkownika: ');
-
-    client.on('message', function (msg) {
-        if (!username) {
-            username = msg;
-            client.send('Witaj ' + username + '!');
-            client.broadcast.emit('message', 'Nowy użytkownik: ' + username);
-            return;
-        }
-        client.broadcast.emit('message', username + ': ' + msg);
-    });
 });
 
 server.listen(3030);
