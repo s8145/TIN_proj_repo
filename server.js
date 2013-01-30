@@ -92,8 +92,8 @@ socket.on('connection', function (client) {
                 swch = 1;
             }
         }
-        if(swch==1){
-            client.emit('newTask', task);//wyswietla zadania z tablicy task
+        if(swch===1){
+            client.emit('newTask', task);
         }else{
             client.emit('zlyLogin', "zła nazwa użytkownika");
         }
@@ -109,11 +109,11 @@ socket.on('connection', function (client) {
         if(task[data].status===0){
             task[data].status=1;
             client.emit('newTask', task);
-            client.broadcast.emit('newTask', task);
+           client.broadcast.emit('newTask', task);
         }else{
             task[data].status=0;
             client.emit('newTask', task);
-            client.broadcast.emit('newTask', task);
+           client.broadcast.emit('newTask', task);
         }
     });
 
@@ -127,7 +127,7 @@ socket.on('connection', function (client) {
 	function updateTime() {
 		var teraz = new Date();
 		var terazStr = teraz.getHours()+':'+teraz.getMinutes()+':'+teraz.getSeconds();
-		client.broadcast.emit('newTime', terazStr)
+		client.emit('newTime', terazStr);
 	}	
 	setInterval(updateTime, 1000);
 	

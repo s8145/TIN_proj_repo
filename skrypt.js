@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 
     socket.on('zlyLogin', function(msg){
-        $('#login').append('<br><font size="2">'+msg+'</font>')
+        $('#login').append('<br><font size="2">'+msg+'</font>');
     });
 	
 	socket.on('newTime', function(time){
@@ -68,7 +68,7 @@ $(document).ready(function () {
         $('#addTask').show();
         $('#taska').show();
 		
-        $("li #pole").click(function (a){
+        $("li #pole").click(function (){
             socket.emit('change', $(this).attr('class'));
         });
 
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
   
 
-    $('#add').click(function (event){ //dodawanie zadania
+    $('#add').click(function (){ //dodawanie zadania
 		var nazwa = $('#nazwa').val();  //przypisywanie wartosci
         var adresat = $('#user').val();
         var termin= $('#termin').val();
