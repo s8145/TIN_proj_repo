@@ -1,18 +1,144 @@
 body {
-  background-color: #eeeeee;
+  background-color: #F0F1F3;
+  font-family:"Consolas";
+  margin:0;
+  padding:0;
 }
-#entry {
-  background-color: black;
-  color: white;
-  width: 100%;
+
+#black{
+background: url('black.jpg') repeat-x 0 0 ;
+background-color: black;
+top:200px;
+width:100%;
+height: 300px;
+left: 0px;
+position:absolute;
 }
-#console {
-  position: fixed;
-  bottom: 20px;
-  width: 98%;
-  font-size: 14px;
+
+#zegar{
+position:absolute;
+right:20px;
+top:-3px;
+font-weight: 700;
 }
-.uname {
-  font-weight: bold;
-  color: green;
+
+#taska{
+position:absolute;
+//background-color: black;
+top:200px;
+width:46%;
+height: 1000px;
+left: 50%;
+margin-left: -23%;
+}
+
+#addTaskBlack{
+background: url('black.jpg') repeat-x 0 0 ;
+background-color: black;
+position:absolute;
+left:-20px;
+top:200px;
+width:265px;
+height:152px;
+border-top-right-radius: 19px;
+border-top-left-radius: 19px;
+border-bottom-right-radius: 19px;
+border-bottom-left-radius: 19px;
+color:white;
+}
+
+#addTask {
+position:absolute;
+left:25px;
+}
+
+#login{
+position:absolute;
+top: 50%;
+width:300px;
+left: 50%;
+margin-left: -150px;
+color: white;
+}
+
+#logo{
+position:absolute;
+top: 50px;
+left: 0px;
+}
+
+#active{
+  float: left;
+  width: 50%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+#active li{
+  display: block;
+  width: 90%;
+  border: 3px solid;
+  margin-bottom: 10px;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+  cursor: crosshair;
+  background: white;
+}
+
+#active li.arv{
+  border: 3px solid red;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+
+}
+
+#active li p span.user{
+  color: red;
+}
+
+#history{
+  float: right;
+  width: 50%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#history li{
+  list-style: none;
+  display: block;
+  width: 90%;
+  border: 3px solid green;
+  margin-bottom: 19px;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+  cursor: crosshair;
+  background: white;
+}
+.user{
+color: red;
+float:right;
+font-weight: 700;
+}
+
+.user2{
+float:right;
+font-weight: 700;
+}
+
+#pole{
+margin: 15px;  
+}
+
+
+
+img[src="task.bmp"]{
+height:auto;
+width:40%;
 }

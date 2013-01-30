@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lista zadan</title>
+    <title>Task</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="skrypt.js"></script>
   </head>  
   <body>
-    <div id="login">
-      <input id="userLogin" type="text">
-      <button id="zaloguj">Zaloguj</button>
-    </div>
-    <div id="addTask">
+
+
+	<div id="logo">
+		<img src="task.bmp" alt="task_logo" />
+	</div>  
+	<div id="black">
+		<div id="login">
+		<label>Logowanie</label><br>
+		<input id="userLogin" type="text">
+		</div>
+	</div>
+
+    <div id="addTaskBlack">
+	<div id="addTask">
 	  <table>
 	  <tr>
 	  <td><label for="nazwa">Zadanie</label></td>
       <td><input type="text" name="nazwa" id="nazwa" ></td>
 	  </tr>
 	  <tr>
-	  <td><label for="user">Adresat</label></td>
-      <td><input type="text" name="user" id="user" ></td>
+	  	  <td><label for="termin">Termin</label></td>
+		  <td><input type="date" name="termin" id="termin" ></td>
+
+	  </tr>
+	  	  <tr>
+	  	  <td><label for="termin">Godzina</label></td>
+		  <td><input type="time" name="tgodzina" id="godzina" ></td>
+
 	  </tr>
 	  <tr>
-	  <td><label for="termin">Termin</label></td>
-      <td><input type="date" name="termin" id="termin" ></td>
+	  <td><label for="user">Adresat</label></td>
+      <td><select name="user" id="user" >
+			<option>wszyscy</option>
+			<option>Filip</option>
+			<option>Monika</option>
+			<option>Marcin</option>
+			<option>Artur</option>
+			<option>Gosia</option>
+			<option>Angelika</option>
+			<option>Ewelina</option>
+			
+		</td>
 	  </tr>
 	  </table>
       <button id="add">Dodaj</button><br><br>
+	</p>
     </div>
-    <div id="tasks">
+	</div>
+	
+	<div id="zegar"></div>
+    <div id="taska">
       
     <ul id="active">
       </ul>
